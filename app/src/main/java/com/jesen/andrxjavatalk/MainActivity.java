@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSubscribe(Disposable d) {
                 GLog.d("观察者， onSubscribe");
+                MainActivity.this.d = d;
             }
 
             @Override
