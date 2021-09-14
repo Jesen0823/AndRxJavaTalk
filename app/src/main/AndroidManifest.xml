@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndRxJavaTalk">
         <activity
-            android:name=".ConditionActivity"
+            android:name=".MergeActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,16 +19,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ConvertActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".CreateActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".FilterActivity"
+            android:name=".ConditionActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".ConvertActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FilterActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -5,34 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConditionActivity">
+    tools:context=".MergeActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:onClick="allClick"
-        android:text="条件操作符 all" />
+        android:onClick="concatWithClick"
+        android:text="合并操作符 concatWith" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:onClick="containsClick"
-        android:text="条件操作符 contains" />
+        android:onClick="startWithClick"
+        android:text="合并操作符 startWith" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:onClick="isEmptyClick"
-        android:text="条件操作符 isEmpty" />
+        android:onClick="concatClick"
+        android:text="合并操作符 concat" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:onClick="anyClick"
-        android:text="条件操作符 any" />
+        android:onClick="zipClick"
+        android:text="合并操作符 zip" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:onClick="mergeClick"
+        android:text="合并操作符 merge" />
 
 </LinearLayout>
