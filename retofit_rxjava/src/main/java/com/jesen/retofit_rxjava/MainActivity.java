@@ -28,7 +28,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * 请求注册，注册完成马上登陆
- * */
+ */
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvRegister, tvLogin;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                         tvLogin.setText("登录成功");
                         tvLogin.setTextColor(Color.BLUE);
 
-                        Log.d("Main---", "loginResponse "+ loginResponse.toString());
+                        Log.d("Main---", "loginResponse " + loginResponse.toString());
                         progressDialog.dismiss();
                     }
 
