@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndRxJavaTalk"
 include ':app'
+include ':retofit_rxjava'

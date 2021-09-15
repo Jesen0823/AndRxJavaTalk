@@ -95,6 +95,11 @@ RxJava 复习
 
 ### 背压
 
+    背压模式的由来：
+
+         RxJava1.X的时候，还没有背压模式， 我们的上游不停的发射，我们的下游处理不过来，就会照成内存泄漏
+         RxJava2.X之后，增加背压模式，Observable  Flowable（解决背压）
+
 ```java
 
 Flowable.create(new FlowableOnSubscribe<Integer>() {
