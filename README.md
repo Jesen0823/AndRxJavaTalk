@@ -95,3 +95,23 @@ RxJava 复习
 
 ### 背压
 
+```java
+
+Flowable.create(new FlowableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(FlowableEmitter<Integer> e) throws Exception {
+                // 上游不停的发射大量事件
+                for (int i = 0; i < Integer.MAX_VALUE; i++) {
+                    e.onNext(i);
+                }
+                e.onComplete();
+            }
+        },
+```
+
+* 背压策略
+
+    * BackpressureStrategy.ERROR  上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，如果池子满了，就会抛出异常
+    * BackpressureStrategy.BUFFER 上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，”等待“下游来接收事件处理
+    * BackpressureStrategy.DROP 上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，如果池子满了，就会把后面发射的事件丢弃
+    * BackpressureStrategy.LATEST 上游不停的发射大量事件，下游阻塞了 处理不过来，只存储 128个事件
