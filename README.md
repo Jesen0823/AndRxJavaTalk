@@ -109,7 +109,7 @@ Flowable.create(new FlowableOnSubscribe<Integer>() {
         },
 ```
 
-* 背压策略
+  * 背压策略
 
     * BackpressureStrategy.ERROR  上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，如果池子满了，就会抛出异常
     * BackpressureStrategy.BUFFER 上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，”等待“下游来接收事件处理
