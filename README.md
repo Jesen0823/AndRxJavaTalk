@@ -120,3 +120,9 @@ Flowable.create(new FlowableOnSubscribe<Integer>() {
     * BackpressureStrategy.BUFFER 上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，”等待“下游来接收事件处理
     * BackpressureStrategy.DROP 上游不停的发射大量事件，下游阻塞了处理不过来，放入缓存池，如果池子满了，就会把后面发射的事件丢弃
     * BackpressureStrategy.LATEST 上游不停的发射大量事件，下游阻塞了 处理不过来，只存储 128个事件
+
+
+### 总结
+
+
+
