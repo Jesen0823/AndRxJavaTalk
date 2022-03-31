@@ -52,8 +52,9 @@ public class SwitchThreadActivity extends AppCompatActivity {
                 e.onNext("BBBBBBBBBBB");
             }
         })
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.newThread()) // 新线程
+                .observeOn(AndroidSchedulers.mainThread()) // 主线程
+                .observeOn(Schedulers.io())
                 .subscribe(new Observer<String>() {
                     @Override
                     public void onSubscribe(Disposable d) {

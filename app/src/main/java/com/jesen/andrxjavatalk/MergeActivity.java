@@ -16,6 +16,9 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 
+/**
+ * 合并操作符
+ * */
 public class MergeActivity extends AppCompatActivity {
 
     @Override
